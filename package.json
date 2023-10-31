@@ -1,0 +1,38 @@
+{
+  "name": "vcl-syntax-highlighting",
+  "displayName": "vcl-syntax-highlighting",
+  "description": "Syntax hightlighting for VCL language",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lelongg/vcl-syntax-highlighting"
+  },
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vcl",
+        "aliases": [
+          "VCL",
+          "vcl"
+        ],
+        "extensions": [
+          ".vcl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vcl",
+        "scopeName": "source.vcl",
+        "path": "./syntaxes/vcl.tmLanguage.json"
+      }
+    ]
+  }
+}

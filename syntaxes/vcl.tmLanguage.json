@@ -1,0 +1,50 @@
+{
+	"scopeName": "source.vcl",
+	"fileTypes": [
+		"vcl"
+	],
+	"patterns": [
+		{
+			"begin": ";",
+			"end": "$",
+			"name": "comment.line.semicolon"
+		},
+		{
+			"begin": "\\b(?:call|goto)\\s+\\b(\\w+)",
+			"end": "\\s",
+			"captures": {
+				"0": {
+					"name": "keyword"
+				},
+				"1": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		{
+			"begin": "\\b(if|else|while|for|alias|call|goto|return)\\b",
+			"end": "\\s",
+			"name": "keyword"
+		},
+		{
+			"begin": "^\\s*\\b(\\w+)(?=\\s*:\\s*)",
+			"end": "(?=:)",
+			"name": "entity.name.function"
+		},
+		{
+			"begin": "\\b(\\w+)\\(",
+			"end": "\\b",
+			"name": "entity.name.function"
+		},
+		{
+			"begin": "\\b(?:0[xX])?[0-9a-fA-F]+\\b",
+			"end": "\\b",
+			"name": "constant.numeric"
+		},
+		{
+			"begin": "\\b\\w+\\b",
+			"end": "\\b",
+			"name": "variable"
+		}
+	]
+}
